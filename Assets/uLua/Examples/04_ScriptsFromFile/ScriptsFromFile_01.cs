@@ -7,16 +7,9 @@ public class ScriptsFromFile_01 : MonoBehaviour
 
     public TextAsset scriptFile;
 
-    // Use this for initialization
-    void Start()
+    private void Start()
     {
-        LuaState l = new LuaState();
-        l.DoString(scriptFile.text);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        LuaState luaState = new LuaState();
+        luaState.DoString(scriptFile.text);
     }
 }
